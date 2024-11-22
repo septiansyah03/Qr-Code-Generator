@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator QRcode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.4/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Design Your QR Code</h1>
+        <input type="text" id="qrInput" placeholder="Tempelkan link Url" />
+        <input type="text" id="watermarkText" placeholder="Masukan judul link" />
+        <button id="generateBtn">Generate QR Code</button>
+        <div id="qrContainer"></div>
+        <a id="downloadLink" class="download-btn" style="display: none;">
+            <i class="fas fa-download"></i>
+            <span>Unduh QR Code</span>
+        </a>
+        
+        <footer>
+            <p>&copy; <span id="currentYear"></span> Created with <i class="fas fa-heart"></i> by AS | All Rights Reserved.</p>
+        </footer>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.4/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
