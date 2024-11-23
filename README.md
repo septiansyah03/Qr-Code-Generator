@@ -8,7 +8,7 @@ Unduh QR Code: Setelah QR code dihasilkan, pengguna dapat mengunduh gambar QR co
 
 >>Teknologi yang Digunakan
 HTML5: Untuk struktur dan konten halaman.
-CSS3: Untuk styling dan membuat tampilan responsif.
+Tailwind CSS: Untuk styling dan membuat tampilan responsif yang elegan dan modern tanpa memerlukan CSS tambahan.
 JavaScript: Untuk menghasilkan QR Code dan menjalankan fungsionalitas.
 SweetAlert2: Untuk menampilkan notifikasi yang lebih menarik dibandingkan alert standar JavaScript.
 QRCode.js: Library untuk menghasilkan QR Code dari URL.
