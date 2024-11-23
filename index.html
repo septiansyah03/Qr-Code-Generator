@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator QRcode</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.4/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            background-color: #1F2937;
+        }
+
+        .container {
+            background-color: #2D3748;
+        }
+
+        .footer {
+            color: #E2E8F0;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Design Your QR Code</h1>
-        <input type="text" id="qrInput" placeholder="Tempelkan link Url" />
-        <input type="text" id="watermarkText" placeholder="Masukan judul link" />
-        <button id="generateBtn">Generate QR Code</button>
-        <div id="qrContainer"></div>
-        <a id="downloadLink" class="download-btn" style="display: none;">
-            <i class="fas fa-download"></i>
+
+<body class="bg-gray-900 text-white font-sans antialiased flex items-center justify-center min-h-screen">
+
+    <div class="bg-gray-800 container rounded-lg shadow-xl p-8 w-full max-w-md">
+        <h1 class="text-4xl font-bold text-center text-indigo-500 mb-6">Design Your QR Code</h1>
+
+        <div class="space-y-4">
+            <input type="text" id="qrInput" placeholder="Tempelkan link Url"
+                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400">
+            <input type="text" id="watermarkText" placeholder="Masukan judul link"
+                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400">
+        </div>
+
+        <button id="generateBtn"
+            class="w-full mt-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-200 focus:outline-none">
+            Generate QR Code
+        </button>
+
+        <div id="qrContainer" class="mt-6 flex justify-center">
+    
+        </div>
+
+        <a id="downloadLink" class="download-btn mt-4 inline-flex items-center justify-center px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200" style="display: none;">
+            <i class="fas fa-download mr-2"></i>
             <span>Unduh QR Code</span>
         </a>
-        
-        <footer>
-            <p>&copy; <span id="currentYear"></span> Created with <i class="fas fa-heart"></i> by AS | All Rights Reserved.</p>
+
+        <footer class="mt-8 text-center footer text-sm">
+            <p>&copy; <span id="currentYear"></span> Created with <i class="fas fa-heart text-red-500"></i> by AS | All Rights Reserved.</p>
         </footer>
-        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.4/dist/sweetalert2.all.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
